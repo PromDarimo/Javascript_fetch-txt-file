@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">Fetch a file to change this text</p>
+</body>
+<script type="text/javascript">
+    let file = "note.txt";
+
+    fetch(file)
+        .then(x => x.text())
+        .then(y => document.getElementById("demo").innerHTML = y)
+</script>
+
+</html>
+
+<!-- 
+    note
+
+    - both x declared by developer 
+    - x.text() = get all text in file note.txt
+    - .then y mean y = x.text() already
+    - output y by display in p where id = "demo"
+ -->
